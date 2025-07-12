@@ -419,7 +419,7 @@ header {
 
 
 
-fetch('data/restaurants.json')
+fetch('restaurants.json')
   .then(response => response.json())
   .then(restaurants => {
     const container = document.getElementById('restaurantList');
