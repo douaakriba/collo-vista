@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Snack Beach",
+    "phone": "0553948875",
+    "meals": [
+      { "name": "pizza boisé crevette", "price": "L= 700DA<br>XL=1400DA<br>XXl=1800DA", "img": "boisé crevette.jpg" },
+      { "name": "pizza trois fromages", "price": "L= 500DA <br> XL= 1000DA <br> XXl=1300DA", "img": "snack 3 fromages.jpg" },
+      { "name": "pizza viande", "price": "L= 450DA <br> XL= 900DA <br> XXl=1300DA", "img": "pizza viande thon snack.jpg" },
+      { "name": "pizza quatre season", "price": "XL= 1000DA <br> XXl=1400DA", "img": "quatre season snack.jpg" },
+      { "name": "pizza cannibale", "price": "L= 750DA <br> XL= 1500DA <br> XXl=1900DA", "img": "pizza cannibale snack.jpg" },
+      { "name": "pizza poulet", "price": "L= 400DA <br> XL= 800DA <br> XXl=1200DA", "img": "pizza poulet snack.jpg" },
+      { "name": "pizza thon", "price": "L= 450DA <br> XL= 900DA <br> XXl=1200DA", "img": "pizza viande thon snack.jpg" },
+      { "name": "pizza fruit de mer", "price": "**", "img": "pizza fruit de mer.jpg" },
+      { "name": "tacos viande / panaché", "price": "400 DA", "img": "tacos snack 2.jpg" },
+      { "name": "tacos 4 fromages / gratiné", "price": "450 DA", "img": "tacos snack 1.jpg" },
+      { "name": "tacos poulet", "price": "350 DA", "img": "tacos snack 2.jpg" },
+      { "name": "souffle viande / panaché", "price": "450 DA", "img": "souffle snack.jpg" },
+      { "name": "souffle poulet", "price": "400 DA", "img": "souffle poulet.jpg" },
+      { "name": "souffle 3 fromages", "price": "500 DA", "img": "souffle snack.jpg" }
+    ]
+  },
+  {
+    "name": "Fiamma Food",
+    "phone": "0794331722",
+    "meals": [
+      { "name": "pizza margheritta", "price": "300 DA", "img": "margharita.jpg" },
+      { "name": "pizza poulet", "price": "400 DA", "img": "pizza poulet fiamma.jpg" },
+      { "name": "pizza anchois", "price": "550 DA", "img": "pizza anchois fiamma.jpg" },
+      { "name": "pizza 3 fromages", "price": "500 DA", "img": "fiamma 3 from.jpg" },
+      { "name": "pizza sauce blanche", "price": "350 DA", "img": "pizza sauce blanche.jpg" },
+      { "name": "pizza thon", "price": "450 DA", "img": "pizza thon fiamma.jpg" },
+      { "name": "panuozzo poulet /viande", "price": "400DA", "img": "panuozzo poulet.jpg" },
+      { "name": "panuozzo abat", "price": "450 DA", "img": "panuozzo viande.jpg" },
+      { "name": "tacos poulet / viande", "price": "400 DA", "img": "tacos poulet.jpg" },
+      { "name": "tacos abat", "price": "450 DA", "img": "tacos viande.jpg" }
+    ]
+  }
+ 
+]
+

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collo Vista</title>
+    <link rel="icon" href="collo vista.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+    <!-- Missing integrity and crossorigin attributes for Bootstrap -->
+   
+    <!-- Duplicate "style.css" link; removed the redundant one -->
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+
+
+    
+  
+    
+
+
+    
+    
+    
+    
+  
+
+
+
+<style>
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease;
+    
+}
+
+
+
+
+.logo img {
+    width: 90px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.menu-icon .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 999;
+}
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.nav-menu ul li a:hover {
+    color: #007BFF;
+}
+
+/* Show nav-menu when it's toggled */
+.nav-menu.active {
+    display: block;
+}
+
+.menu-icon .hamburger:hover {
+    color: #555;
+}
+
+/*  intro*/
+
+
+/* Intro Section */
+.intro-section {
+            display: flex;
+            align-items: center;
+            justify-content:  space-between;
+            padding: 50px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 1200px;
+            margin: 40px auto;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1.5s ease-out forwards;
+            flex-wrap: wrap;
+            position: relative;
+            border-radius: 30px;
+        }
+
+        .intro-section img {
+            width: 300px;
+            height: auto;
+            margin-right: 30px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+            position: fixed; /* Make image fixed */
+            left: 20px; /* Keep it aligned to the left */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust to center */
+
+        }
+
+        .intro-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .intro-content {
+            max-width: 600px;
+            text-align: left;
+            opacity: 0;
+            animation: fadeInText 1.5s ease-out 0.3s forwards;
+            margin-left: 340px; /* Offset to make room for the fixed image */
+        }
+
+        .intro-content h1 {
+            font-size: 2.5rem;
+            color: #2d3436;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInText 1.5s ease-out 0.5s forwards;
+        }
+
+        .intro-content p {
+            font-size: 1.2rem;
+            color: #636e72;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeInText 1.5s ease-out 0.7s forwards;
+        }
+
+        .intro-content .cta-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(245, 176, 47);
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            animation: fadeInText 1.5s ease-out 0.9s forwards;
+        }
+
+        .intro-content .cta-btn:hover {
+            background-color: #ff4040;
+            transform: translateY(-3px);
+        }
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center-align content */
+    }
+
+    .intro-section img {
+
+        position: fixed;
+        width: 120px; /* Smaller image on mobile */
+        margin-left: 10px;
+    }
+
+    .intro-content {
+        max-width: 100%; /* Make sure the text doesn't overflow */
+        margin-left: 150px; /* Adjust text position for smaller image */
+    }
+
+    .intro-content h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .intro-content p {
+        font-size: 1.1rem; /* Adjust paragraph size for readability */
+    }
+}
+        /* Keyframes for Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+        /* te3 restooo*/
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f8fa;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+     h1 { text-align: center; margin-bottom: 30px; color: #FF7A00; }
+
+    .restaurant-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .restaurant-card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 20px;
+    }
+
+    .restaurant-title {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        color: #FF7A00;
+        text-align: center;
+        font-family: cursive;
+    }
+
+    .meal-slider {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+    }
+
+    .meal-slider::-webkit-scrollbar {
+        height: 8px;
+    }
+    .meal-slider::-webkit-scrollbar-thumb {
+        background: #FF7A00;
+        border-radius: 4px;
+    }
+
+    .meal {
+        flex: 0 0 auto;
+        width: 250px;
+        scroll-snap-align: center;
+        background: #fff3ea;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+
+    .meal:hover {
+        transform: scale(1.03);
+    }
+
+    .meal img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .meal-info {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .meal-name {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .meal-price {
+        background: #FF7A00;
+        color: #fff;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+        .meal { width: 200px; }
+    }
+</style>
+</head>
+<header>
+    <div class="logo">
+        <!-- Fixed wrong image source "collo vista.png" to "collo-vista.png" to follow naming conventions -->
+        <img src="collo vista.png" alt="Collo Logo">
+    </div>
+    <div class="menu-icon">
+        <span class="hamburger">&#9776;</span>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="appartments.html">Appartements à louer </a></li>
+            <li><a href="contactt.html">contact me </a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+
+
+    <!-- Small Intro Section -->
+    <div class="intro-section">
+        <img src="chef picsart.jpg" alt="chef">
+        <div class="intro-content">
+            <h1 style="font-family: cursive; color: rgba(255, 166, 0, 0.842);">Let's enjoy your meal !</h1>
+            <br>
+            <p>Collo propose surtout des fast-foods,
+               mais aussi des restaurants avec des plats locaux et des spécialités de la mer, 
+               pour satisfaire toutes les envies.</p>
+            <a href="#restaurants" class="cta-btn"> Restaurants</a>
+            <br>
+        </div>
+    </div>
+    <div class="site-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="heading-39101 mb-5">
+              <span class="backdrop">Food Delivery</span>
+              <span class="subtitle-39191">Découvrez les meilleurs </span>
+              <h3>restaurants à collo </h3>
+            </div>
+            <br>
+            <br>
+            
+            <p> Profitez des services de livraison à Collo pour savourer vos plats préférés sans quitter votre confort <br>
+              Commandez en ligne et découvrez la variété de restaurants qui livrent directement chez vous.<br>
+          </p>
+            
+          </div>
+          <div class="col-md-6" data-aos="fade-right">
+            <img src="food delivery.png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div  id="restaurants" class="container">
+        
+
+
+<div class="restaurant-list" id="restaurantList">
+    <!-- Content Injected by JS -->
+</div>
+
+<script>
+
+
+
+
+
+fetch('data/restaurants.json')
+  .then(response => response.json())
+  .then(restaurants => {
+    const container = document.getElementById('restaurantList');
+
+    restaurants.forEach(restaurant => {
+      const card = document.createElement('div');
+      card.className = 'restaurant-card';
+
+      card.innerHTML = `
+        <h2 class="restaurant-title">${restaurant.name}</h2>
+        <div style="text-align: center;">
+          <a href="tel:${restaurant.phone}" class="call-btn">📞 Call: ${restaurant.phone}</a>
+        </div>
+        <div class="meal-slider">
+          ${restaurant.meals.map(meal => `
+            <div class="meal">
+              <img src="${meal.img}" alt="${meal.name}">
+              <div class="meal-info">
+                <span class="meal-name">${meal.name}</span>
+                <span class="meal-price">${meal.price}</span>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+const container = document.getElementById('restaurantList');
+
+restaurants.forEach(restaurant => {
+    const card = document.createElement('div');
+    card.className = 'restaurant-card';
+
+    card.innerHTML = `
+        <h2 class="restaurant-title">${restaurant.name}</h2>
+        <div style="text-align: center;">
+            <a href="tel:${restaurant.phone}" class="call-btn">📞 Call: ${restaurant.phone}</a>
+        </div>
+        <div class="meal-slider">
+            ${restaurant.meals.map(meal => `
+                <div class="meal">
+                    <img src="${meal.img}" alt="${meal.name}">
+                    <div class="meal-info">
+                        <span class="meal-name">${meal.name}</span>
+                        <span class="meal-price">${meal.price}</span>
+                    </div>
+                </div>
+            `).join('')}
+        </div>
+    `;
+
+    container.appendChild(card);
+});
+</script>
+
+
+
+
+
+      
+      
+</body>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+
+
+
+
+</html>

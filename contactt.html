@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+
+
+
+   
+
+
+  <style>
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease;
+}
+
+
+
+
+
+.logo img {
+    width: 90px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.menu-icon .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 999;
+}
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.nav-menu ul li a:hover {
+    color: #007BFF;
+}
+
+/* Show nav-menu when it's toggled */
+.nav-menu.active {
+    display: block;
+}
+
+.menu-icon .hamburger:hover {
+    color: #555;
+}
+
+
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.intro-image img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 16px;
+
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.intro-text h2 {
+  color: #1b1f6b;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.intro-text hr {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background: #7a3fa0;
+  width: 80%;
+}
+
+
+    
+
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding-top: 140px; /* يخلي كل شي يبعد عن الهيدر */
+}
+
+
+
+    .contact-container {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 50, 0.05);
+      padding: 40px;
+      width: 100%;
+      max-width: 600px;
+      margin: 60px auto;
+     
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      color: #1b1f6b;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      color: #1b1f6b;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #7a3fa0;
+      outline: none;
+      box-shadow: 0 0 8px rgba(122, 63, 160, 0.2);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      background: linear-gradient(45deg, #1b1f6b, #7a3fa0);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(45deg, #7a3fa0, #1b1f6b);
+    }
+
+    @media (max-width: 600px) {
+      .contact-container {
+        padding: 20px;
+      }
+    }
+
+
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .intro-image img {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .intro-text {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .contact-container {
+    margin: 30px 20px;
+    padding: 20px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <!-- Fixed wrong image source "collo vista.png" to "collo-vista.png" to follow naming conventions -->
+        <img src="collo vista.png" alt="Collo Logo">
+    </div>
+    <div class="menu-icon">
+        <span class="hamburger">&#9776;</span>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="hotels.html">Hotels</a></li>  
+            <li><a href="appartments.html">Appartements à louer </a></li>
+            <li><a href="contactt.html">contact me </a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="intro-section">
+  <div class="intro-image">
+    <img src="contact.jpg" alt="Ajouter votre établissement à ColloVista">
+  </div>
+  <div class="intro-text">
+    <h2>Ajouter votre établissement sur ColloVista</h2>
+    <p>
+      Si vous souhaitez ajouter votre <strong>restaurant</strong>, <strong>hôtel</strong> ou <strong>appartement à louer</strong> sur notre site <strong>ColloVista</strong>,
+      veuillez remplir le formulaire ci-dessous. Je vous contacterai par e-mail pour confirmer et vous demander les détails nécessaires.
+    </p>
+    <hr>
+    <p dir="rtl" lang="ar">
+      إذا كنت ترغب في إضافة <strong>مطعمك</strong>، <strong>فندقك</strong> أو <strong>شقتك للإيجار</strong> في موقع <strong>ColloVista</strong>، يرجى ملء النموذج أدناه. سأقوم بالاتصال بك عبر البريد الإلكتروني لتأكيد العملية وطلب التفاصيل.
+    </p>
+  </div>
+</section>
+
+
+
+
+  <form class="contact-container" action="https://formsubmit.co/douaakriba@outlook.fr" method="POST">
+    <h2>Contact Me</h2>
+
+    <!-- Honeypot to prevent spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="New Submission to Add Listing">
+
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Adress</label>
+      <input type="email" id="email" name="Email" placeholder="Enter your email address" required>
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="Subject" placeholder="e.g. I want to add my hotel" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="Message" placeholder="Write your message here..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Send Message</button>
+  </form>
+
+
+
+
+
+
+  
+
+</body>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collo Vista</title>
+    <link rel="icon" href="collo vista.png" type="image/png">
+    <style>
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.menu-icon .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 999;
+}
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.nav-menu ul li a:hover {
+    color: #007BFF;
+}
+
+/* Show nav-menu when it's toggled */
+.nav-menu.active {
+    display: block;
+}
+
+.menu-icon .hamburger:hover {
+    color: #555;
+}
+
+
+/* intro section 3d pic*/
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 1200px;
+      height: 450px;
+      background-color: #fff;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 20px auto;
+      
+      
+    }
+    .container {
+            border: 2px solid #5f4726; /* Lighter brown effect for the container */
+        }
+
+   
+    .intro {
+  text-align: center;
+  margin: 100px auto 40px;
+  padding: 20px;
+  background-color: #f7f0e8;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  max-width: 1000px;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #5a4032;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+    /* hotelllllllllllllllllllllllllllllll*/
+
+/* Container for Hotel Section */
+.hotel-section {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            flex-wrap: wrap;
+        }
+
+        /* Left: Image Slider */
+        .hotel-slider {
+            flex: 1;
+            max-width: 50%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            object-fit: cover;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+
+        .slider-controls button {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Right: Hotel Details */
+        .hotel-details {
+            flex: 1;
+            padding: 30px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hotel-name {
+            font-size: 1.8rem;
+            color: #5b3928;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hotel-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #5b3928;
+            margin-bottom: 10px;
+        }
+
+        .hotel-description {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .call-btn {
+            background-color: #8e5a3a;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: fit-content;
+            transition: background-color 0.3s ease;
+        }
+
+        .call-btn:hover {
+            background-color: #5b3928;
+        }
+
+        /* Google Maps */
+        .map-container {
+            margin-top: 20px;
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+    .hotel-section {
+        flex-direction: column;
+    }
+
+    .hotel-slider,
+    .hotel-details {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .map-container {
+        height: 150px;
+    }
+
+    .hotel-name {
+        font-size: 1.5rem;
+    }
+
+    .hotel-price {
+        font-size: 1.1rem;
+    }
+
+    .call-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hotel-name {
+        font-size: 1.2rem;
+    }
+
+    .hotel-price {
+        font-size: 1rem;
+    }
+
+    .map-container {
+        height: 120px;
+    }
+
+    .call-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+    </style>
+</head>
+<header>
+    <div class="logo">
+        <!-- Fixed wrong image source "collo vista.png" to "collo-vista.png" to follow naming conventions -->
+        <img src="collo vista.png" alt="Collo Logo">
+    </div>
+    <div class="menu-icon">
+        <span class="hamburger">&#9776;</span>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="appartments.html">Appartements à louer </a></li>
+            <li><a href= "contactt.html"> Contact me </a></li>
+        
+        </ul>
+    </nav>
+     
+ 
+</header>
+<body>
+    <div class="intro">
+  <p>Découvrez une sélection des meilleurs hôtels de Collo, avec des photos, prix et localisation pour réserver facilement.</p>
+  <p>اكتشف أفضل الفنادق في مدينة القل مع الصور والأسعار والموقع للحجز بكل سهولة.</p>
+</div>
+
+    
+
+
+    <div id="hotels-container"></div>
+
+   
+
+
+<script>
+    // Slider for Hotel 1
+    let slideIndex1 = 0;
+    const slides1 = document.querySelectorAll('#hotel1 .slide');
+
+    function changeSlide1(n) {
+        slides1[slideIndex1].classList.remove('active');
+        slideIndex1 = (slideIndex1 + n + slides1.length) % slides1.length;
+        slides1[slideIndex1].classList.add('active');
+    }
+
+    setInterval(() => changeSlide1(1), 3000);
+
+    // Slider for Hotel 2
+    let slideIndex2 = 0;
+    const slides2 = document.querySelectorAll('#hotel2 .slide');
+
+    function changeSlide2(n) {
+        slides2[slideIndex2].classList.remove('active');
+        slideIndex2 = (slideIndex2 + n + slides2.length) % slides2.length;
+        slides2[slideIndex2].classList.add('active');
+    }
+
+    setInterval(() => changeSlide2(1), 3000);
+</script>
+
+
+
+
+
+
+
+      
+  
+</body>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+
+
+
+
+
+
+
+<script>
+async function loadHotels() {
+    const response = await fetch('hotels.json');
+    const hotels = await response.json();
+    const container = document.getElementById('hotels-container');
+
+    hotels.forEach((hotel, index) => {
+        const hotelSection = document.createElement('div');
+        hotelSection.className = 'hotel-section';
+        hotelSection.id = `hotel${index + 1}`;
+
+        const sliderImages = hotel.images.map((img, i) => `
+            <img src="${img}" class="slide ${i === 0 ? 'active' : ''}" alt="Hotel Image ${i + 1}">
+        `).join('');
+
+        hotelSection.innerHTML = `
+            <div class="hotel-slider">
+                ${sliderImages}
+                <div class="slider-controls">
+                    <button onclick="changeSlide(${index}, -1)">❮</button>
+                    <button onclick="changeSlide(${index}, 1)">❯</button>
+                </div>
+            </div>
+            <div class="hotel-details">
+                <h1 class="hotel-name">${hotel.name}</h1>
+                <p class="hotel-description">${hotel.description.replace(/\n/g, '<br>')}</p>
+                <p class="hotel-price">${hotel.price}</p>
+                <button class="call-btn" onclick="window.location.href='tel:${hotel.phone}'">Appelez maintenant</button>
+                <div class="map-container">
+                    <iframe src="${hotel.map}" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        `;
+        container.appendChild(hotelSection);
+    });
+
+    initSliders(hotels.length);
+}
+
+function initSliders(count) {
+    for (let i = 0; i < count; i++) {
+        let index = 0;
+        const slides = document.querySelectorAll(`#hotel${i + 1} .slide`);
+
+        window[`changeSlide${i}`] = function(n) {
+            slides[index].classList.remove('active');
+            index = (index + n + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        };
+
+        setInterval(() => window , 3000);
+    }
+}
+
+function changeSlide(index, step) {
+    window[`changeSlide${index}`](step);
+}
+
+loadHotels();
+</script>
+
+</html>

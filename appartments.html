@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appartements à louer - Collo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfcfb;
+      color: #333;
+    }
+
+   /* Navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease;
+}
+
+
+
+
+
+.logo img {
+    width: 90px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.menu-icon .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 999;
+}
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.nav-menu ul li a:hover {
+    color: #007BFF;
+}
+
+/* Show nav-menu when it's toggled */
+.nav-menu.active {
+    display: block;
+}
+
+.menu-icon .hamburger:hover {
+    color: #555;
+}
+
+    .section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 120px 20px 0; 
+    }
+     .intro {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f7f0e8;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #5a4032;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+      background: #fff;
+      margin-bottom: 40px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .slider {
+      flex: 1 1 400px;
+      position: relative;
+      max-height: 350px;
+      overflow: hidden;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    .slider img.active {
+      display: block;
+    }
+
+    .slider button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.7);
+      border: none;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .slider button.prev {
+      left: 10px;
+    }
+
+    .slider button.next {
+      right: 10px;
+    }
+
+    .info {
+      flex: 1 1 300px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info h2 {
+      margin: 0;
+      font-size: 1.7rem;
+      color: #6d4c41;
+    }
+
+    .info p {
+      margin: 15px 0;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .info a {
+      text-decoration: none;
+      color: #00796b;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+      }
+
+      .slider,
+      .info {
+        width: 100%;
+      }
+
+      .slider {
+        max-height: 250px;
+      }
+
+      .info {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <!-- Fixed wrong image source "collo vista.png" to "collo-vista.png" to follow naming conventions -->
+        <img src="collo vista.png" alt="Collo Logo">
+    </div>
+    <div class="menu-icon">
+        <span class="hamburger">&#9776;</span>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="appartments.html">Appartements à louer </a></li>
+            <li><a href="contactt.html">contact me </a></li>
+        </ul>
+    </nav>
+</header>
+
+
+  
+
+ <section class="section">
+  <div class="intro">
+    <p>Découvrez une sélection  d'appartements à louer dans la ville côtière de Collo.</p>
+    <p>Chaque appartement est équipé pour assurer votre confort pendant votre séjour.</p>
+    <p>اكتشف مجموعة من الشقق  للإيجار في مدينة القل الساحلية.</p>
+    <p>كل شقة مجهزة لتوفر لك الراحة أثناء إقامتك.</p>
+  </div>
+
+  <div id="appartements-container"></div>
+</section>
+
+  <script>
+    function nextSlide(index) {
+      const slider = document.querySelectorAll('.slider')[index];
+      const images = slider.querySelectorAll('img');
+      let current = [...images].findIndex(img => img.classList.contains('active'));
+      images[current].classList.remove('active');
+      images[(current + 1) % images.length].classList.add('active');
+    }
+
+    function prevSlide(index) {
+      const slider = document.querySelectorAll('.slider')[index];
+      const images = slider.querySelectorAll('img');
+      let current = [...images].findIndex(img => img.classList.contains('active'));
+      images[current].classList.remove('active');
+      images[(current - 1 + images.length) % images.length].classList.add('active');
+    }
+  </script>
+<script>
+async function loadAppartements() {
+  const response = await fetch('appartements.json');
+  const data = await response.json();
+
+  const container = document.getElementById('appartements-container');
+
+  data.forEach((apt, index) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const slider = document.createElement('div');
+    slider.className = 'slider';
+    slider.setAttribute('data-index', index);
+
+    apt.images.forEach((src, i) => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.className = i === 0 ? 'active' : '';
+      slider.appendChild(img);
+    });
+
+    slider.innerHTML += `
+      <button class="prev" onclick="prevSlide(${index})">‹</button>
+      <button class="next" onclick="nextSlide(${index})">›</button>
+    `;
+
+    const info = document.createElement('div');
+    info.className = 'info';
+    info.innerHTML = `
+      <h2>${apt.title}</h2>
+      <p><strong>Prix:</strong> ${apt.price}</p>
+      <p><strong>📞 Téléphone:</strong> <a href="tel:${apt.phone}">${apt.phone}</a></p>
+      <a href="${apt.location}" target="_blank">📍 Voir sur Google Maps</a>
+    `;
+
+    card.appendChild(slider);
+    card.appendChild(info);
+    container.appendChild(card);
+  });
+}
+
+loadAppartements();
+</script>
+
+</body>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+</html>
