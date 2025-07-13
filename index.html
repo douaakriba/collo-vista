@@ -1119,11 +1119,30 @@ h3 {
         <div class="activity-card">
             <img src="girlss kayak.png" alt="Kayaking" class="activity-image">
             <div class="activity-details">
-                <h3>Kayak </h3>
+                <h3>Sortie Kayak  </h3>
                 <span class="price">Prix: 1000 DA</span>
-                <span class="location">Location: vers les grottes</span>
+                <span class="location">📍 Départ : Plage Aïn Doula (en face de l’hôtel Bougaroun – Collo)</span>
                 <span class="duration">Durée: 1:30 min </span>
-                <p> --- </p>
+                <p style="color: black;">  Kayak en groupe avec accompagnateur vers les grottes marines, sur l’un des plus beaux parcours côtiers d’Algérie
+                    <br>🏊‍♂️ Pause baignade & 📸 belles photos <br> 🕘 Horaires : 10h00 ☀️ /  15h00 🌅 <br>  📲 Pour réserver, envoyez : Nom, Nombre de personnes, Âge et le Numéro de téléphone via la page instagram <br> 📞0562716915 / 0557549981 
+
+                </p>
+                <a href="https://www.instagram.com/kayak.collo?igsh=dGNqNDViNnZ6OXAx" class="btn">Page instagram</a>
+            </div>
+        </div>
+
+         <!-- Kayaking Activity -->
+        <div class="activity-card">
+            <img src="sortie 4 en 1.jpg" alt="🌊 Sortie 4 en 1 – Collo" class="activity-image">
+            <div class="activity-details">
+                <h3>🌊 Sortie 4 en 1 </h3>
+                <h3>🚤 Bateau + 🏖️ Plage isolée + 🚣‍♂️ Kayak + 🏄‍♂️ Paddle (optionnel)</h3>
+                <span class="price">Prix: 2000 DA </span>
+                <span class="location">📍 Départ : Plage Aïn Doula</span>
+                <span class="duration">Durée 🕘 : De 09h00 à 16h00</span>
+                <p style="color: black;"> ✅ Encadrement <br> 📲 Pour réserver, envoyez : Nom, Nombre de personnes, Âge et le Numéro de téléphone via la page instagram <br> 📞0562716915 / 0557549981 
+
+</p>
                 <a href="https://www.instagram.com/kayak.collo?igsh=dGNqNDViNnZ6OXAx" class="btn">Page instagram</a>
             </div>
         </div>
@@ -1333,6 +1352,14 @@ document.addEventListener('DOMContentLoaded', loadOpinions);
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
     });
+    // Close nav menu if user clicks outside
+document.addEventListener('click', (event) => {
+  const isClickInside = navMenu.contains(event.target) || hamburger.contains(event.target);
+  if (!isClickInside) {
+    navMenu.classList.remove('active');
+  }
+});
+
 </script>
 
 
