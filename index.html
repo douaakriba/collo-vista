@@ -188,11 +188,28 @@ header {
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             .intro-section {
-                height: 50vh; /* Reduced height for mobile */
-            }
-            .intro-text {
-                font-size: 1.5rem; /* Adjust font for smaller screens */
-            }
+    height: auto; /* Let it grow with content */
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    
+    
+  }
+
+  .intro-section img {
+    height: auto;
+    width: 100%;
+    object-fit: contain; /* Show the whole image */
+    animation: none;     /* Remove zoom effect */
+    border-radius: 0;
+  }
+
+  .intro-text {
+    position: static; /* Remove text from center */
+    transform: none;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4); /* Optional dark overlay for readability */
+  }
             .intro-text h1 {
                 font-size: 2rem; /* Smaller heading for mobile */
             }
@@ -437,8 +454,7 @@ h3 {
     /*hhhhhhhhhhhhhhhhhhhh*/ 
 
 
-   
-        .unique-blue-card-container {
+     .unique-blue-card-container {
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
@@ -509,6 +525,33 @@ h3 {
             }
         }
     
+
+
+
+
+
+
+@media (min-width: 1024px) {
+  .unique-blue-card-container {
+    padding: 40px 60px;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .unique-blue-card {
+    min-width: 350px;
+    max-width: 400px;
+    flex: 0 0 auto;
+  }
+}
+
+   
+
+
+
+
 
     /*hhhhhhhhhhh*/
 
@@ -785,6 +828,28 @@ h3 {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -813,6 +878,7 @@ h3 {
 
     <section class="intro-section">
         <img src= "collo.jpg" alt="Collo Nature">
+
         
         <div class="scroll-indicator">
             <span></span>
@@ -1053,9 +1119,9 @@ h3 {
         <div class="activity-card">
             <img src="girlss kayak.png" alt="Kayaking" class="activity-image">
             <div class="activity-details">
-                <h3>Kayaking </h3>
+                <h3>Kayak </h3>
                 <span class="price">Prix: 1000 DA</span>
-                <span class="location">Location: vers les gottes</span>
+                <span class="location">Location: vers les grottes</span>
                 <span class="duration">Durée: 1:30 min </span>
                 <p> --- </p>
                 <a href="https://www.instagram.com/kayak.collo?igsh=dGNqNDViNnZ6OXAx" class="btn">Page instagram</a>
