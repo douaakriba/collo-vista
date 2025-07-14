@@ -1242,7 +1242,7 @@ Que votre avis soit positif ou négatif, il nous aidera à améliorer l’expér
             </div>
     
             <div class="footer-contact">
-                <h3>Contact :</h3>
+                <h3>Connecter :</h3>
                 <div class="social-links">
                     <a href="https://github.com/douaakriba" target="_blank" class="social-icon">
                         <i class="fab fa-github"></i>
@@ -1319,7 +1319,7 @@ function submitOpinion() {
 }
 
 function loadOpinions() {
-    fetch('reviews.php')
+    fetch("https://collovista.infinityfreeapp.com/reviews.php")
     .then(response => response.json())
     .then(opinions => {
         const list = document.getElementById('opinions-list');
@@ -1347,6 +1347,42 @@ document.addEventListener('DOMContentLoaded', loadOpinions);
 </script>
 
 
+
+
+
+<script>
+  function submitOpinion() {
+  const name = document.getElementById('visitor-name').value.trim();
+  const text = document.getElementById('visitor-opinion').value.trim();
+
+  if (!name || !text) {
+    alert("Veuillez remplir tous les champs.");
+    return;
+  }
+
+  fetch("https://collovista.infinityfreeapp.com/reviews.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name, text })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      alert("Merci pour votre avis !");
+      document.getElementById('visitor-name').value = "";
+      document.getElementById('visitor-opinion').value = "";
+    } else {
+      alert("Erreur lors de l'envoi. Veuillez réessayer.");
+    }
+  })
+  .catch(error => {
+    console.error("Erreur:", error);
+    alert("Erreur de connexion.");
+  });
+}
+</script>
     
 </body>
 <script>
