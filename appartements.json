@@ -13,5 +13,37 @@
     ],
     "location": "https://maps.app.goo.gl/K3JsVH4heQREJ1R49"
     
+  },
+  {
+    "title": "Appartement studio ",
+    "price": "3500 DA / jour",
+    "phone": "0658441267",
+    "images": [
+      "chiraz 1.jpg",
+      "chiraz2.jpg",
+      "chiraz3.jpg",
+      "chiraz4.jpg",
+      "chiraz5.jpg",
+      "chiraz6.jpg"
+
+    ],
+    "location": "https://maps.app.goo.gl/efqHP3n8PaqTwtTT7"
+    
+  },
+  {
+    "title": "Appartement studio ",
+    "price": "3500 DA / jour",
+    "phone": "0658441267",
+    "images": [
+      "chiraz7.jpg",
+      "chiraz8.jpg",
+      "chiraz9.jpg",
+      "chiraz10.jpg",
+      "chiraz11.jpg"
+
+    ],
+    "location": "https://maps.app.goo.gl/efqHP3n8PaqTwtTT7"
+    
   }
 ]
+
