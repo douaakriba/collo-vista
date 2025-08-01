@@ -44,6 +44,46 @@
     ],
     "location": "https://maps.app.goo.gl/efqHP3n8PaqTwtTT7"
     
+  },
+  {
+    "title": "Appartement avec vue sur la mer , juste en face de la plage ",
+    "price": "17500 DA / jour",
+    "phone": "0541617723",
+    "images": [
+      "douadi1.jpg",
+      "douadi7.jpg",
+      "douadi2.jpg",
+      "douadi4.jpg",
+      "douadi5.jpg",
+      "douadi6.jpg",
+      "douadi10.jpg",
+      "douadi11.jpg",
+      "douadi14.jpg",
+      "douadi16.jpg"
+
+    ],
+    "location": "https://maps.app.goo.gl/s2f9gqBA2VE5ssiz8"
+    
+  },
+  {
+  "title": "Appartement dans la presqu'ile de collo ",
+    "price": "15500 DA / jour",
+    "phone": "0541617723",
+    "images": [
+      "douadi15.jpg",
+      "douadi3.jpg",
+      "douadi2.jpg",
+      "douadi4.jpg",
+      "douadi5.jpg",
+      "douadi6.jpg",
+      "douadi10.jpg",
+      "douadi13.jpg",
+      "douadi12.jpg",
+      "douadi17.jpg"
+
+    ],
+    "location": "https://maps.app.goo.gl/s2f9gqBA2VE5ssiz8"
+    
   }
 ]
 
